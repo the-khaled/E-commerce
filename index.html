@@ -642,7 +642,7 @@ footer {
 .success-screen p { color: var(--text2); font-size: 0.9rem; }
 </style>
 </head>
-<body>
+<body id="bodya">
 
 <!-- ============================================================
      LOADING SCREEN
@@ -764,7 +764,7 @@ footer {
     <div class="feature-card reveal reveal-delay-1">
       <div class="feature-icon">🚀</div>
       <h3>Fast Delivery</h3>
-      <p>Free express shipping on orders over $75. Most orders arrive within 2–3 business days.</p>
+      <p>Free express shipping on orders over $75. Most orders arrive within 2-3 business days.</p>
     </div>
     <div class="feature-card reveal reveal-delay-2">
       <div class="feature-icon">🔒</div>
@@ -917,7 +917,7 @@ footer {
       <h4>Contact</h4>
       <p>hello@luxestore.com</p>
       <p>+1 (800) 555-LUXE</p>
-      <p>Mon–Fri 9am – 6pm EST</p>
+      <p>Mon-Fri 9am - 6pm EST</p>
       <p>15 Mercer St, New York, NY</p>
     </div>
   </div>
@@ -933,6 +933,7 @@ footer {
 <script>
 'use strict';
 
+
 /* ============================================================
    PRODUCT DATA
    ============================================================ */
@@ -946,9 +947,7 @@ const PRODUCTS = [
   { id: 7,  name: 'Smart Planner Pro',          category: 'lifestyle', price: 49,   oldPrice: null, emoji: '📓', badge: null,         rating: 4.8, reviews: 201, desc: 'Undated weekly planner with habit tracking pages.' },
   { id: 8,  name: 'Marble Phone Stand',         category: 'tech',      price: 38,   oldPrice: null, emoji: '📱', badge: 'New',         rating: 4.3, reviews: 47,  desc: 'Natural marble with adjustable angle. MagSafe compatible.' },
   { id: 9,  name: 'Cold Brew Bottle',           category: 'lifestyle', price: 55,   oldPrice: 68,  emoji: '🧃', badge: 'Sale',        rating: 4.6, reviews: 118, desc: 'Double-walled stainless. Keeps cold 24h, hot 12h.' },
-  { id: 10, name: 'Lavender Room Mist',         category: 'wellness',  price: 34,   oldPrice: null, emoji: '🌿', badge: null,         rating: 4.7, reviews: 76,  desc: 'Organic lavender and chamomile. 100ml refillable bottle.' },
-  { id: 11, name: 'Walnut Cheese Board',        category: 'home',      price: 86,   oldPrice: null, emoji: '🧀', badge: null,         rating: 4.9, reviews: 63,  desc: 'Solid black walnut with integrated drawer for tools.' },
-  { id: 12, name: 'Cashmere Beanie',            category: 'fashion',   price: 110,  oldPrice: 140, emoji: '🧢', badge: 'Bestseller', rating: 4.8, reviews: 234, desc: 'Grade-A Mongolian cashmere. Lightweight and impossibly soft.' },
+  { id: 10, name: 'Lavender Room Mist',         category: 'wellness',  price: 34,   oldPrice: null, emoji: '🌿', badge: null,         rating: 4.7, reviews: 76,  desc: 'Organic lavender and chamomile. 100ml refillable bottle.' }
 ];
 
 /* ============================================================
