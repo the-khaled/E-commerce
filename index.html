@@ -263,7 +263,10 @@ nav a:hover::after { transform: scaleX(1); }
   background: linear-gradient(135deg, #e8d5b8 0%, #c8a87a 100%);
   border-radius: 16px; margin-bottom: 20px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 5rem;
+  overflow: hidden;
+}
+.hero-card-img img {
+  width: 100%; height: 100%; object-fit: cover; border-radius: 16px;
 }
 .hero-card-title {
   font-family: 'Cormorant Garamond', serif;
@@ -301,11 +304,15 @@ section { padding: 100px 5%; }
 }
 .feature-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
 .feature-icon {
-  font-size: 2.2rem; margin-bottom: 16px;
+  margin-bottom: 16px;
   display: flex; align-items: center; justify-content: center;
   width: 60px; height: 60px; border-radius: 16px;
   background: linear-gradient(135deg, rgba(200,134,58,0.15), rgba(200,134,58,0.05));
   margin: 0 auto 16px;
+  overflow: hidden;
+}
+.feature-icon img {
+  width: 100%; height: 100%; object-fit: cover; border-radius: 16px;
 }
 .feature-card h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 8px; }
 .feature-card p { font-size: 0.83rem; color: var(--text2); line-height: 1.6; }
@@ -344,7 +351,9 @@ section { padding: 100px 5%; }
   aspect-ratio: 1; position: relative; overflow: hidden;
   background: var(--bg2);
   display: flex; align-items: center; justify-content: center;
-  font-size: 4rem;
+}
+.product-img img {
+  width: 100%; height: 100%; object-fit: cover;
 }
 .product-overlay {
   position: absolute; inset: 0; background: rgba(0,0,0,0.4);
@@ -443,7 +452,8 @@ section { padding: 100px 5%; }
   height: 100%; gap: 16px; color: var(--text2);
   text-align: center;
 }
-.cart-empty-icon { font-size: 3.5rem; opacity: 0.4; }
+.cart-empty-icon { width: 80px; height: 80px; opacity: 0.4; border-radius: 10px; overflow: hidden; }
+.cart-empty-icon img { width: 100%; height: 100%; object-fit: cover; }
 .cart-empty p { font-size: 0.9rem; }
 .cart-item {
   display: flex; gap: 14px; padding: 16px 0;
@@ -454,7 +464,10 @@ section { padding: 100px 5%; }
 .cart-item-img {
   width: 70px; height: 70px; border-radius: 10px;
   background: var(--bg2); flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center; font-size: 1.8rem;
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.cart-item-img img {
+  width: 100%; height: 100%; object-fit: cover; border-radius: 10px;
 }
 .cart-item-info { flex: 1; }
 .cart-item-name { font-size: 0.9rem; font-weight: 500; margin-bottom: 4px; }
@@ -500,7 +513,8 @@ section { padding: 100px 5%; }
   text-align: center; padding: 60px 20px; color: var(--text2);
   font-size: 0.9rem;
 }
-.fav-empty .big-icon { font-size: 3rem; margin-bottom: 12px; opacity: 0.4; }
+.fav-empty .big-icon { width: 80px; height: 80px; margin-bottom: 12px; opacity: 0.4; border-radius: 10px; overflow: hidden; }
+.fav-empty .big-icon img { width: 100%; height: 100%; object-fit: cover; }
 
 /* ============================================================
    CHECKOUT SECTION
@@ -634,7 +648,8 @@ footer {
   gap: 20px;
 }
 .success-screen.show { display: flex; }
-.success-icon { font-size: 4rem; }
+.success-icon { width: 80px; height: 80px; border-radius: 10px; overflow: hidden; }
+.success-icon img { width: 100%; height: 100%; object-fit: cover; }
 .success-screen h3 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2rem; font-weight: 300;
@@ -744,7 +759,7 @@ footer {
   </div>
   <div class="hero-visual" aria-hidden="true">
     <div class="hero-card">
-      <div class="hero-card-img">🛍️</div>
+      <div class="hero-card-img"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&h=300&fit=crop" alt="Editor's Pick" loading="lazy"></div>
       <div class="hero-card-title">Editor's Pick</div>
       <div class="hero-card-price">Starting at $49</div>
     </div>
@@ -762,22 +777,22 @@ footer {
   </div>
   <div class="features-grid">
     <div class="feature-card reveal reveal-delay-1">
-      <div class="feature-icon">🚀</div>
+      <div class="feature-icon"><img src="/images/image.png" alt="Fast Delivery" loading="lazy"></div>
       <h3>Fast Delivery</h3>
       <p>Free express shipping on orders over $75. Most orders arrive within 2-3 business days.</p>
     </div>
     <div class="feature-card reveal reveal-delay-2">
-      <div class="feature-icon">🔒</div>
+      <div class="feature-icon"><img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=100&h=100&fit=crop" alt="Secure Payments" loading="lazy"></div>
       <h3>Secure Payments</h3>
       <p>256-bit SSL encryption keeps every transaction completely safe and private.</p>
     </div>
     <div class="feature-card reveal reveal-delay-3">
-      <div class="feature-icon">✨</div>
+      <div class="feature-icon"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=100&h=100&fit=crop" alt="Curated Quality" loading="lazy"></div>
       <h3>Curated Quality</h3>
       <p>Every product is hand-selected by our team for craftsmanship and lasting value.</p>
     </div>
     <div class="feature-card reveal reveal-delay-1">
-      <div class="feature-icon">💬</div>
+      <div class="feature-icon"><img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=100&h=100&fit=crop" alt="24/7 Support" loading="lazy"></div>
       <h3>24/7 Support</h3>
       <p>Real humans, always available. Reach us via chat, email, or phone — your choice.</p>
     </div>
@@ -876,7 +891,7 @@ footer {
       <button type="submit" class="btn-submit">Place Order — <span id="orderTotal">$0.00</span></button>
     </form>
     <div class="success-screen" id="successScreen">
-      <div class="success-icon">🎉</div>
+      <div class="success-icon"><img src="https://images.unsplash.com/photo-1531686264889-56fdcabd163f?w=100&h=100&fit=crop" alt="Success" loading="lazy"></div>
       <h3>Order Placed!</h3>
       <p>Thank you! You'll receive a confirmation email shortly.</p>
       <button class="btn-primary" onclick="resetAfterOrder()" style="margin-top:10px">Continue Shopping</button>
@@ -938,16 +953,16 @@ footer {
    PRODUCT DATA
    ============================================================ */
 const PRODUCTS = [
-  { id: 1,  name: 'Artisan Leather Tote',      category: 'fashion',   price: 189,  oldPrice: 240, emoji: '👜', badge: 'Bestseller', rating: 4.8, reviews: 142, desc: 'Full-grain vegetable-tanned leather. Gets better with age.' },
-  { id: 2,  name: 'Minimal Desk Lamp',          category: 'home',      price: 94,   oldPrice: null, emoji: '💡', badge: null,         rating: 4.6, reviews: 87,  desc: 'Warm-toned LED with touch dimmer. Scandinavian design.' },
-  { id: 3,  name: 'Noise-Cancelling Pods',      category: 'tech',      price: 249,  oldPrice: 299, emoji: '🎧', badge: 'Sale',        rating: 4.9, reviews: 310, desc: 'Adaptive ANC with 32-hour battery life.' },
-  { id: 4,  name: 'Organic Cotton Robe',        category: 'wellness',  price: 78,   oldPrice: null, emoji: '🧖', badge: null,         rating: 4.7, reviews: 54,  desc: 'GOTS-certified cotton. Spa-quality weight and softness.' },
-  { id: 5,  name: 'Ceramic Pour-Over Set',      category: 'home',      price: 62,   oldPrice: null, emoji: '☕', badge: 'New',         rating: 4.5, reviews: 29,  desc: 'Hand-thrown ceramic with matching server. For the ritual.' },
-  { id: 6,  name: 'Linen Overshirt',            category: 'fashion',   price: 128,  oldPrice: 155, emoji: '👔', badge: 'Sale',        rating: 4.4, reviews: 93,  desc: 'European linen blend. Relaxed fit, wrinkle-resistant.' },
-  { id: 7,  name: 'Smart Planner Pro',          category: 'lifestyle', price: 49,   oldPrice: null, emoji: '📓', badge: null,         rating: 4.8, reviews: 201, desc: 'Undated weekly planner with habit tracking pages.' },
-  { id: 8,  name: 'Marble Phone Stand',         category: 'tech',      price: 38,   oldPrice: null, emoji: '📱', badge: 'New',         rating: 4.3, reviews: 47,  desc: 'Natural marble with adjustable angle. MagSafe compatible.' },
-  { id: 9,  name: 'Cold Brew Bottle',           category: 'lifestyle', price: 55,   oldPrice: 68,  emoji: '🧃', badge: 'Sale',        rating: 4.6, reviews: 118, desc: 'Double-walled stainless. Keeps cold 24h, hot 12h.' },
-  { id: 10, name: 'Lavender Room Mist',         category: 'wellness',  price: 34,   oldPrice: null, emoji: '🌿', badge: null,         rating: 4.7, reviews: 76,  desc: 'Organic lavender and chamomile. 100ml refillable bottle.' }
+  { id: 1,  name: 'Artisan Leather Tote',      category: 'fashion',   price: 189,  oldPrice: 240, image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&h=400&fit=crop', badge: 'Bestseller', rating: 4.8, reviews: 142, desc: 'Full-grain vegetable-tanned leather. Gets better with age.' },
+  { id: 2,  name: 'Minimal Desk Lamp',          category: 'home',      price: 94,   oldPrice: null, image: 'https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=400&h=400&fit=crop', badge: null,         rating: 4.6, reviews: 87,  desc: 'Warm-toned LED with touch dimmer. Scandinavian design.' },
+  { id: 3,  name: 'Noise-Cancelling Pods',      category: 'tech',      price: 249,  oldPrice: 299, image: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400&h=400&fit=crop', badge: 'Sale',        rating: 4.9, reviews: 310, desc: 'Adaptive ANC with 32-hour battery life.' },
+  { id: 4,  name: 'Organic Cotton Robe',        category: 'wellness',  price: 78,   oldPrice: null, image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800&auto=format&fit=crop', badge: null,         rating: 4.7, reviews: 54,  desc: 'GOTS-certified cotton. Spa-quality weight and softness.' },
+  { id: 5,  name: 'Ceramic Pour-Over Set',      category: 'home',      price: 62,   oldPrice: null, image: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?w=400&h=400&fit=crop', badge: 'New',         rating: 4.5, reviews: 29,  desc: 'Hand-thrown ceramic with matching server. For the ritual.' },
+  { id: 6,  name: 'Linen Overshirt',            category: 'fashion',   price: 128,  oldPrice: 155, image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop', badge: 'Sale',        rating: 4.4, reviews: 93,  desc: 'European linen blend. Relaxed fit, wrinkle-resistant.' },
+  { id: 7,  name: 'Smart Planner Pro',          category: 'lifestyle', price: 49,   oldPrice: null, image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=400&h=400&fit=crop', badge: null,         rating: 4.8, reviews: 201, desc: 'Undated weekly planner with habit tracking pages.' },
+  { id: 8,  name: 'Marble Phone Stand',         category: 'tech',      price: 38,   oldPrice: null, image: 'https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=400&h=400&fit=crop', badge: 'New',         rating: 4.3, reviews: 47,  desc: 'Natural marble with adjustable angle. MagSafe compatible.' },
+  { id: 9,  name: 'Cold Brew Bottle',           category: 'lifestyle', price: 55,   oldPrice: 68,  image: 'https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&h=400&fit=crop', badge: 'Sale',        rating: 4.6, reviews: 118, desc: 'Double-walled stainless. Keeps cold 24h, hot 12h.' },
+  { id: 10, name: 'Lavender Room Mist',         category: 'wellness',  price: 34,   oldPrice: null, image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&h=400&fit=crop', badge: null,         rating: 4.7, reviews: 76,  desc: 'Organic lavender and chamomile. 100ml refillable bottle.' }
 ];
 
 /* ============================================================
@@ -1034,7 +1049,7 @@ function addToCart(productId) {
   if (existing) {
     existing.qty++;
   } else {
-    cart.push({ id: product.id, name: product.name, price: product.price, emoji: product.emoji, qty: 1 });
+    cart.push({ id: product.id, name: product.name, price: product.price, image: product.image, qty: 1 });
   }
   saveCart();
   updateCartUI();
@@ -1073,7 +1088,7 @@ function updateCartUI() {
   if (cart.length === 0) {
     cartItems.innerHTML = `
       <div class="cart-empty">
-        <div class="cart-empty-icon">🛍️</div>
+        <div class="cart-empty-icon"><img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=100&h=100&fit=crop" alt="Empty cart" loading="lazy"></div>
         <p>Your cart is empty.<br/>Add some items to get started.</p>
       </div>`;
     cartFooter.innerHTML = '';
@@ -1082,7 +1097,7 @@ function updateCartUI() {
 
   cartItems.innerHTML = cart.map(item => `
     <div class="cart-item" role="listitem">
-      <div class="cart-item-img" aria-hidden="true">${item.emoji}</div>
+      <div class="cart-item-img" aria-hidden="true"><img src="${item.image}" alt="${item.name}" loading="lazy"></div>
       <div class="cart-item-info">
         <div class="cart-item-name">${item.name}</div>
         <div class="cart-item-price">$${(item.price * item.qty).toFixed(2)}</div>
@@ -1191,7 +1206,7 @@ function updateFavUI() {
 function renderFavorites() {
   const grid = document.getElementById('favoritesGrid');
   if (favorites.length === 0) {
-    grid.innerHTML = `<div class="fav-empty"><div class="big-icon">💔</div><p>No saved items yet.<br/>Tap the heart on any product to save it.</p></div>`;
+    grid.innerHTML = `<div class="fav-empty"><div class="big-icon"><img src="https://cdn-icons-png.flaticon.com/512/4076/4076549.png" alt="No favorites" loading="lazy"></div><p>No saved items yet.<br/>Tap the heart on any product to save it.</p></div>`;
     return;
   }
   const favProducts = PRODUCTS.filter(p => favorites.includes(p.id));
@@ -1227,7 +1242,7 @@ function buildProductCard(product) {
         <div class="fav-indicator ${isFav ? 'active' : ''}" aria-hidden="true">
           <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
         </div>
-        ${product.emoji}
+        <img src="${product.image}" alt="${product.name}" loading="lazy">
       </div>
       <div class="product-body">
         <div class="product-category">${product.category}</div>
